@@ -17,17 +17,18 @@ const SearchHeader = () => {
             priority
             style={{ width: "auto" }}
           />
+
         </Link>
-        <div className="">
-          <SearchBox />
+          <div className="">
+            <SearchBox />
+          </div>
+        <div className="hidden md:inline-flex space-x-2">
+          <RiSettings3Line className=" bg-transparent rounded-full p-2 text-4xl cursor-pointer hover:bg-gray-400" />
+          <TbGridDots className=" bg-transparent rounded-full p-2 text-4xl cursor-pointer hover:bg-gray-400" />
+          <button className=" bg-blue-500 text-white px-6 py-2 font-medium rounded-md hover:brightness-105 hover:shadow-md transition-shadow ml-2">
+            Sign In
+          </button>
         </div>
-        <div className=" hidden md:inline-flex space-x-2">
-          <RiSettings3Line className=" bg-transparent rounded-full bg-gray-200 p-2 text-4xl cursor-pointer hover:bg-gray-400" />
-          <TbGridDots className=" bg-transparent rounded-full bg-gray-200 p-2 text-4xl cursor-pointer hover:bg-gray-400" />
-        </div>
-        <button className=" bg-blue-500 text-white px-6 py-2 font-medium rounded-md hover:brightness-105 hover:shadow-md transition-shadow ml-2">
-          Sign In
-        </button>
       </div>
     </header>
   );
