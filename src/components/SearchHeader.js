@@ -4,6 +4,7 @@ import React from "react";
 import SearchBox from "./SearchBox";
 import { RiSettings3Line } from "react-icons/ri";
 import { TbGridDots } from "react-icons/tb";
+import SearchHeaderOption from "./SearchHeaderOption";
 
 const SearchHeader = () => {
   return (
@@ -17,11 +18,10 @@ const SearchHeader = () => {
             priority
             style={{ width: "auto" }}
           />
-
         </Link>
-          <div className="">
-            <SearchBox />
-          </div>
+        <div className="">
+          <SearchBox />
+        </div>
         <div className="hidden md:inline-flex space-x-2">
           <RiSettings3Line className=" bg-transparent rounded-full p-2 text-4xl cursor-pointer hover:bg-gray-400" />
           <TbGridDots className=" bg-transparent rounded-full p-2 text-4xl cursor-pointer hover:bg-gray-400" />
@@ -30,6 +30,7 @@ const SearchHeader = () => {
           </button>
         </div>
       </div>
+      <SearchHeaderOption />
     </header>
   );
 };
