@@ -11,7 +11,7 @@ const SearchHeaderOption = () => {
 
   const selectTab = (tab) => {
     router.push(
-      `/search${tab === "Images" ? "image" : "web"}?searchTerm=${searchTerm}`
+      `/search/${tab === "Images" ? "image" : "web"}?searchTerm=${searchTerm}`
     );
   };
   return (
