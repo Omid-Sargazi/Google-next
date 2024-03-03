@@ -1,3 +1,4 @@
+import WebSearchRssults from "@/components/WebSearchRssults";
 import Link from "next/link";
 import React from "react";
 
@@ -20,7 +21,7 @@ export default async function WebSearchPage({ searchParams }) {
         </h1>
         <p className=" text-lg">
           Try searching the web or images for something else
-          <Link href="/" className=" text-blue-500 ">
+          <Link href="/" className=" text-blue-500 cd">
             Home
           </Link>
         </p>
@@ -29,8 +30,6 @@ export default async function WebSearchPage({ searchParams }) {
   }
 
   return (
-    <div className="">
-      {results && results.map((result) => <h1>{result.title}</h1>)}
-    </div>
+    <div className="">{results && <WebSearchRssults results={data} />}</div>
   );
 }
