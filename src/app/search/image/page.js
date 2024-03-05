@@ -3,7 +3,8 @@ import React from "react";
 import ImageSearchRssults from "../../../components/ImageSearchRssults";
 
 export default async function ImageSearchPage({ searchParams }) {
-  let url = `https://www.googleapis.com/customsearch/v1?key=AIzaSyAHE5XXfueIT5jSVVk7Ym1rx-NLYtVNl1Q&cx=1425e5293ecd44890&q=${searchParams.searchTerm}&searchType=image`;
+  const startIndex = searchParams.start || 1;
+  let url = `https://www.googleapis.com/customsearch/v1?key=AIzaSyAHE5XXfueIT5jSVVk7Ym1rx-NLYtVNl1Q&cx=1425e5293ecd44890&q=${searchParams.searchTerm}&searchType=image&start=${startIndex}`;
   const response = await fetch(
     url
     // `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=lectures`
