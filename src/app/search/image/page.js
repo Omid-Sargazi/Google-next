@@ -4,6 +4,7 @@ import ImageSearchRssults from "../../../components/ImageSearchRssults";
 
 export default async function ImageSearchPage({ searchParams }) {
   const startIndex = searchParams.start || 1;
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   let url = `https://www.googleapis.com/customsearch/v1?key=AIzaSyAHE5XXfueIT5jSVVk7Ym1rx-NLYtVNl1Q&cx=1425e5293ecd44890&q=${searchParams.searchTerm}&searchType=image&start=${startIndex}`;
   const response = await fetch(
     url
